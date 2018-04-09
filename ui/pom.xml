@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>springbootangularprotractor</artifactId>
+        <groupId>springbootangularprotractor</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>demo-ui</artifactId>
+    <version>${parent.version}</version>
+    <name>Demo :: UI</name>
+    <description>Frontend module for Demo</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>${frontend-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpcore</artifactId>
+                        <version>4.4.4</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>npm install protractor</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+
+                        <configuration>
+                            <arguments>run lint</arguments>
+                            <arguments>install protractor</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm install npm-run-all</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>install npm-run-all --save-dev</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm install ng-apimock</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>install ng-apimock --save-dev</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm run build</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+
+                        <configuration>
+                            <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>npm run test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+
+                        <configuration>
+                            <arguments>run test ${e2e.mock.server.port} ${e2e.proxy.port}</arguments>
+                        </configuration>
+                    </execution>
+
+                </executions>
+                <configuration>
+                    <nodeVersion>${node.version}</nodeVersion>
+                    <npmVersion>${npm.version}</npmVersion>
+                    <installDirectory>target</installDirectory>
+                    <workingDirectory>./</workingDirectory>
+                    <!-- node executable and npm gets installed under target/ -->
+                    <!--<npmDownloadRoot>${npm.repository}</npmDownloadRoot>-->
+                    <!--<nodeDownloadRoot>${node.repository}</nodeDownloadRoot>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

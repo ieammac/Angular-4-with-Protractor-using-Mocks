@@ -1,0 +1,12 @@
+.demo-nav-pills {
+    margin-top: 20px;
+}
+
+.demo-nav-pills > li, .demo-nav-pills > li, .demo-nav-pills > li > a{
+    background-color: #ebebeb;
+    color: #737373;
+}
+
+.demo-nav-pills > li> a:hover, .demo-nav-pills > .active > a:hover, .demo-nav-pills > .active > a {
+    background-color: #000000;
+}

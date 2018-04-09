@@ -1,0 +1,43 @@
+table {
+    /* Generic */
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        vertical-align: inherit;
+        color: black;
+    }
+
+    td {
+        padding: 8px 0;
+        text-align: center;
+    }
+
+
+    /* Head */
+    thead th {
+        border-bottom: 2px solid #222;
+    }
+
+    /* Body */
+    tbody {
+        tr {
+            border-bottom: 1px solid #ccc;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}

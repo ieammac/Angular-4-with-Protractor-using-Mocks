@@ -1,0 +1,15 @@
+[
+  {
+    "itemNumber": "12345678910",
+    "receivedDate": "2017-05-01"
+  },
+  {
+    "itemNumber": "22345678910",
+    "receivedDate": "second date"
+  },
+  {
+    "itemNumber": "32345678910",
+    "receivedDate": "third date"
+  }
+]
+

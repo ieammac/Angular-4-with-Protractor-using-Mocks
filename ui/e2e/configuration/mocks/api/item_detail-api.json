@@ -1,0 +1,19 @@
+{
+  "expression": "api\/items\/[0-9]*$",
+  "method": "GET",
+  "name": "detailOfItem",
+  "isArray": false,
+  "responses": {
+    "detail": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "e2e/configuration/mocks/data/items/item_detail.json"
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "expression": "api\/items\/list$",
+  "method": "GET",
+  "name": "itemList",
+  "isArray": true,
+  "responses": {
+    "list": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "e2e/configuration/mocks/data/items/items_1.json"
+    },
+    "list-2": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "file": "e2e/configuration/mocks/data/items/items_2.json"
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

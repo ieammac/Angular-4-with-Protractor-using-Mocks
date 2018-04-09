@@ -1,0 +1,29 @@
+
+<div data-layout-fragment="content" class="container">
+  <div class="mt-3">
+    <h1 class="text-center">Demo</h1>
+
+    <div class="col-md-offset-3 col-md-6">
+      <table id="item-list">
+        <thead>
+          <tr>
+            <th>Item Number</th>
+            <th class="text-right">Received Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of itemList">
+            <td>
+              <a routerLink="/details/{{item.itemNumber}}">{{item.itemNumber}}</a>
+            </td>
+
+            <td>{{ item.receivedDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
