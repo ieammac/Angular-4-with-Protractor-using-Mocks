@@ -10,7 +10,7 @@
     "build": "./node_modules/@angular/cli/bin/ng build --output-path=target/classes/static",
     "lint": "./node_modules/@angular/cli/bin/ng lint",
     "e2e": "ng e2e --proxy-config e2e/configuration/proxy.e2e.conf.js",
-    "pretest.example":"webdriver-manager update",
+    "pretest.example": "webdriver-manager update",
     "test": "npm-run-all -p -r \"mocks -- --port={1}\" \"e2e -- --proxy.conf.port={1} --port={2}\" --"
   },
   "private": true,
@@ -27,7 +27,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
-    "protractor": "^5.3.0",
+    "protractor": "^5.4.2",
     "rxjs": "^5.4.3",
     "zone.js": "^0.8.16"
   },
@@ -40,8 +40,8 @@
     "concurrently": "^3.5.1",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
-    "ng-apimock": "^1.4.4",
-    "npm-run-all": "^4.1.2",
+    "ng-apimock": "^1.4.9",
+    "npm-run-all": "^4.1.5",
     "ts-node": "^3.3.0",
     "tslint": "~5.7.0",
     "typescript": "^2.5.2",
